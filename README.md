@@ -1,19 +1,83 @@
-# Create T3 App
+# Interview Challenge: Address Book App
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project built for an interview challenge, featuring an Address Book application that fetches and displays user data with interactive filtering, sorting, and search capabilities.
 
-## What's next? How do I make an app with this?
+🚀 **Live Demo**: [https://interview-eight-rosy.vercel.app/](https://interview-eight-rosy.vercel.app/)
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Challenge Overview
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+The goal is to create an Address Book app that:
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- Fetches user data from [https://dummyjson.com/users](https://dummyjson.com/users)
+- Displays users in a clean, structured layout
+- Enables interactive filtering, sorting, and search functionality
+- Emphasizes type safety, clean architecture, and maintainability
+
+### Tech Stack Used
+
+- **React** - UI framework
+- **Next.js** - Full-stack React framework
+- **TypeScript** - Type safety throughout
+- **tRPC** - End-to-end typesafe APIs
+- **Prisma** - Database ORM
+- **SQLite** - Database
+- **Tailwind CSS** - Styling
+- **Zod** - Runtime type validation
+
+## Features Implemented
+
+- ✅ Fetches and validates user data from external API
+- ✅ Clean, responsive card-based layout
+- ✅ Search functionality (name and email)
+- ✅ Filtering by gender and other user properties
+- ✅ Sorting by name, age, and other fields
+- ✅ Loading and error state handling
+- ✅ Type-safe data validation with Zod
+- ✅ Clean component architecture
+- ✅ Responsive design
+
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/andrashejj/interview
+cd interview
+```
+
+2. Install dependencies:
+
+```bash
+pnpm install
+```
+
+3. Set up the database:
+
+```bash
+pnpm db:push
+```
+
+4. Start the development server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── _components/
+│   │   ├── challenge.tsx      # Challenge description component
+│   │   └── address-book/      # Address book components
+│   └── page.tsx               # Main page
+├── server/
+│   └── api/                   # tRPC API routes
+└── trpc/                      # tRPC configuration
+```
 
 ## Learn More
 
@@ -24,6 +88,6 @@ To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the fo
 
 You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## How do I deploy this?
+## Deployment
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+This application is deployed on [Vercel](https://vercel.com/). For more deployment options, see the [T3 deployment guides](https://create.t3.gg/en/deployment/vercel).
