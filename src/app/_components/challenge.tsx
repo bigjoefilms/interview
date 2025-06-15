@@ -54,11 +54,45 @@ const Checkbox = ({
 export default function Challenge() {
   return (
     <section className="mx-auto my-10 max-w-2xl rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8 shadow-xl">
-      <div className="mb-8 flex items-center gap-3">
-        <span className="text-4xl">🎯</span>
-        <span className="text-2xl font-bold tracking-tight text-slate-900 drop-shadow-sm">
-          Interview Challenge: Address Book App
-        </span>
+      <div className="mb-8 flex flex-col gap-4">
+        <div className="flex items-center gap-3">
+          <span className="text-4xl">🎯</span>
+          <span className="text-2xl font-bold tracking-tight text-slate-900 drop-shadow-sm">
+            Interview Challenge: Address Book App
+          </span>
+        </div>
+        {/* Baseline stack section */}
+        <div className="flex flex-col gap-2 rounded-xl border border-violet-200 bg-violet-50 p-4 shadow-sm">
+          <div className="mb-1 flex items-center gap-2">
+            <span className="text-lg">🛠️</span>
+            <span className="text-base font-semibold text-violet-700">
+              Baseline Tech Stack
+            </span>
+          </div>
+          <ul className="flex flex-wrap gap-3 text-sm font-medium text-violet-900">
+            <li className="rounded-md border border-violet-200 bg-violet-100 px-2 py-1">
+              React
+            </li>
+            <li className="rounded-md border border-violet-200 bg-violet-100 px-2 py-1">
+              Next.js
+            </li>
+            <li className="rounded-md border border-violet-200 bg-violet-100 px-2 py-1">
+              tRPC
+            </li>
+            <li className="rounded-md border border-violet-200 bg-violet-100 px-2 py-1">
+              Prisma
+            </li>
+            <li className="rounded-md border border-violet-200 bg-violet-100 px-2 py-1">
+              SQLite
+            </li>
+          </ul>
+          <div className="mt-1 text-xs text-violet-700">
+            <span className="font-semibold">Note:</span> You are{" "}
+            <span className="font-semibold">not expected</span> to add extra
+            libraries (e.g. shadcn/ui, Tailwind, etc.), but you may do so if you
+            wish. Focus on the baseline stack above.
+          </div>
+        </div>
       </div>
 
       <div className="mb-10">
@@ -123,22 +157,15 @@ export default function Challenge() {
         </h3>
         <ul className="mt-1 ml-2">
           <Checkbox disabled>
-            Use React (with your preferred meta-framework like Vite, Next.js,
-            etc.)
-          </Checkbox>
-          <Checkbox disabled>
-            Strong emphasis on type safety: use <b>zod</b> or similar to
-            validate fetched data
+            Strong emphasis on type safety: use zod or similar to validate
+            fetched data
           </Checkbox>
           <Checkbox disabled>Use TypeScript throughout the project</Checkbox>
           <Checkbox disabled>
             Apply clean component architecture and consider separation of
             concerns
           </Checkbox>
-          <Checkbox disabled>
-            Design should be visually clean (you can use a CSS framework like
-            Tailwind or your own styles)
-          </Checkbox>
+          <Checkbox disabled>Design should be visually clean</Checkbox>
         </ul>
       </div>
       <div className="mb-10 rounded-xl border border-sky-100 bg-sky-50 p-4">
@@ -181,7 +208,8 @@ export default function Challenge() {
         </h2>
         <ol className="mt-1 ml-2 space-y-1 text-slate-800">
           <Checkbox disabled>
-            Clone this repository: <b>[INSERT GIT REPO URL]</b>
+            Clone this repository:{" "}
+            <b>https://github.com/andrashejj/interview</b>
           </Checkbox>
           <Checkbox disabled>
             Create a new branch: <code>yourname/address-book-challenge</code>
