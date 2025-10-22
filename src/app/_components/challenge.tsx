@@ -53,7 +53,7 @@ const Checkbox = ({
 
 export default function Challenge() {
   return (
-    <section className="mx-auto my-10 max-w-2xl rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8 shadow-xl">
+    <section className="mx-auto my-10 max-w-4xl rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-8 shadow-xl">
       <div className="mb-8 flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <span className="text-4xl">🎯</span>
@@ -121,53 +121,114 @@ export default function Challenge() {
           </Checkbox>
         </ul>
       </div>
+
       <div className="mb-10">
         <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-sky-700">
-          <span>🧩</span> Requirements
+          <span>🧩</span> Requirements Split
         </h2>
-        <h3 className="mt-4 mb-1 text-base font-semibold text-slate-800">
-          Functional
-        </h3>
-        <ul className="mt-1 ml-2">
-          <Checkbox disabled>
-            Fetch data from{" "}
-            <a
-              href="https://dummyjson.com/users"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://dummyjson.com/users
-            </a>
-          </Checkbox>
-          <Checkbox disabled>
-            Display the users in a structured, card- or table-style layout (your
-            choice)
-          </Checkbox>
-          <Checkbox disabled>
-            Allow the user to:
-            <ul className="list-disc pl-6">
-              <li>Search by name or email</li>
-              <li>Filter by e.g. gender or other user fields</li>
-              <li>Sort by name, age, or any other property</li>
-            </ul>
-          </Checkbox>
-        </ul>
-        <h3 className="mt-4 mb-1 text-base font-semibold text-slate-800">
-          Technical
-        </h3>
-        <ul className="mt-1 ml-2">
-          <Checkbox disabled>
-            Strong emphasis on type safety: use zod or similar to validate
-            fetched data
-          </Checkbox>
-          <Checkbox disabled>Use TypeScript throughout the project</Checkbox>
-          <Checkbox disabled>
-            Apply clean component architecture and consider separation of
-            concerns
-          </Checkbox>
-          <Checkbox disabled>Design should be visually clean</Checkbox>
-        </ul>
+
+        <div className="mb-6">
+          <h3 className="mt-4 mb-2 text-lg font-semibold text-green-700">
+            🎨 Frontend (Design)
+          </h3>
+          <p className="mb-2 text-sm text-slate-600">
+            Focus on CSS skills, Tailwind, fancy animations, and visual appeal.
+          </p>
+          <ul className="mt-1 ml-2">
+            <Checkbox disabled>
+              Design a visually appealing UI for the address book using Tailwind
+              CSS
+            </Checkbox>
+            <Checkbox disabled>
+              Implement smooth animations for interactions (e.g., hover effects,
+              transitions)
+            </Checkbox>
+            <Checkbox disabled>
+              Ensure responsive design that works on mobile and desktop
+            </Checkbox>
+            <Checkbox disabled>
+              Use creative layouts, colors, and typography to enhance user
+              experience
+            </Checkbox>
+          </ul>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="mt-4 mb-2 text-lg font-semibold text-blue-700">
+            ⚙️ Frontend (Engineering)
+          </h3>
+          <p className="mb-2 text-sm text-slate-600">
+            Focus on cache, API call optimization, query invalidation, etc.
+          </p>
+          <ul className="mt-1 ml-2">
+            <Checkbox disabled>
+              Implement efficient caching for API responses using tRPC/React
+              Query
+            </Checkbox>
+            <Checkbox disabled>
+              Optimize API calls with debouncing for search and proper query
+              invalidation
+            </Checkbox>
+            <Checkbox disabled>
+              Handle loading states and error boundaries effectively
+            </Checkbox>
+            <Checkbox disabled>
+              Ensure component re-renders are minimized with proper memoization
+            </Checkbox>
+          </ul>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="mt-4 mb-2 text-lg font-semibold text-purple-700">
+            🔗 Backend (Integration)
+          </h3>
+          <p className="mb-2 text-sm text-slate-600">
+            Focus on integration patterns, queues, API calls, failure handling,
+            etc.
+          </p>
+          <ul className="mt-1 ml-2">
+            <Checkbox disabled>
+              Integrate with external API (dummyjson.com) with proper error
+              handling and retries
+            </Checkbox>
+            <Checkbox disabled>
+              Implement data fetching patterns using tRPC routers
+            </Checkbox>
+            <Checkbox disabled>
+              Handle API failures gracefully with fallback mechanisms
+            </Checkbox>
+            <Checkbox disabled>
+              Consider asynchronous processing or queuing if applicable
+            </Checkbox>
+          </ul>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="mt-4 mb-2 text-lg font-semibold text-red-700">
+            🚀 Backend (Optimization)
+          </h3>
+          <p className="mb-2 text-sm text-slate-600">
+            Focus on optimized DB calls, cache, invalidations, algorithms O(1),
+            etc.
+          </p>
+          <ul className="mt-1 ml-2">
+            <Checkbox disabled>
+              Optimize database queries with efficient Prisma operations
+            </Checkbox>
+            <Checkbox disabled>
+              Implement caching strategies for frequently accessed data
+            </Checkbox>
+            <Checkbox disabled>
+              Use O(1) or efficient algorithms for sorting, filtering, and
+              search
+            </Checkbox>
+            <Checkbox disabled>
+              Ensure proper indexing and query invalidation for performance
+            </Checkbox>
+          </ul>
+        </div>
       </div>
+
       <div className="mb-10 rounded-xl border border-sky-100 bg-sky-50 p-4">
         <h2 className="mb-2 flex items-center gap-2 text-lg font-semibold text-sky-700">
           <span>✅</span> Bonus Points For
@@ -184,6 +245,10 @@ export default function Challenge() {
           <Checkbox disabled>
             Thinking holistically — e.g. consider performance, accessibility,
             and extensibility
+          </Checkbox>
+          <Checkbox disabled>Deployed app</Checkbox>
+          <Checkbox disabled>
+            Implement a working todo list feature that stores in database
           </Checkbox>
         </ul>
       </div>
