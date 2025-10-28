@@ -2,10 +2,10 @@ import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useUsers } from "@/hooks/useUsers";
-import { SearchBar } from "@/components/SearchBar";
-import { FilterPanel } from "@/components/FilterPanel";
-import { UserTable } from "@/components/UserTable";
-import { Pagination } from "@/components/Pagination";
+import { SearchBar } from "@/_components/SearchBar";
+import { FilterPanel } from "@/_components/FilterPanel";
+import { UserTable } from "@/_components/UserTable";
+import { Pagination } from "@/_components/Pagination";
 
 export default function Home() {
   const router = useRouter();
