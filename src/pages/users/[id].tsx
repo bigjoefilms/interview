@@ -3,9 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useUser } from "@/hooks/useUser";
-import { Button } from "@/_components/ui/Button";
-import { Spinner } from "@/_components/ui/Spinner";
-import { TodosDrawer } from "@/_components/TodosDrawer";
+import { Button } from "@/components/ui/Button";
+import { Spinner } from "@/components/ui/Spinner";
+import { TodosDrawer } from "@/components/TodosDrawer";
 
 export default function UserDetailPage() {
   const router = useRouter();
