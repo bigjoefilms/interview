@@ -2,7 +2,7 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project built for an interview challenge, featuring an Address Book application that fetches and displays user data with interactive filtering, sorting, and search capabilities.
 
-🚀 **Live Demo**: [https://interview-eight-rosy.vercel.app/](https://interview-eight-rosy.vercel.app/)
+🚀 **Live Demo**: [https://interview-eight-rosy.vercel.app/](https://address-book-challenge-ten.vercel.app/)
 
 ## Challenge Overview
 
