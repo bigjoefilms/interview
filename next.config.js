@@ -23,12 +23,20 @@ const config = {
     ignoreDuringBuilds: true,
   },
 
-  // Exclude test files from build
+  // Exclude test files and Jest config from build
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(test|spec)\.(js|jsx|ts|tsx)$/,
       loader: 'ignore-loader',
     });
+    
+    // Exclude Jest config files
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'jest.config.cjs': false,
+      'jest.setup.cjs': false,
+    };
+    
     return config;
   },
 };

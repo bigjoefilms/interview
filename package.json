@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "mv jest.config.cjs jest.config.cjs.tmp && mv jest.setup.cjs jest.setup.cjs.tmp && next build && mv jest.config.cjs.tmp jest.config.cjs && mv jest.setup.cjs.tmp jest.setup.cjs",
     "check": "next lint && tsc --noEmit",
     "db:generate": "prisma migrate dev",
     "db:migrate": "prisma migrate deploy",
