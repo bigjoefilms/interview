@@ -119,5 +119,8 @@ src/
 
 - `pnpm dev` - Start development server
 - `pnpm build` - Build for production
+- `pnpm test` - Run tests with Jest
+- `pnpm test:watch` - Run tests in watch mode
+- `pnpm test:coverage` - Run tests with coverage report
 - `pnpm db:seed` - Seed the database
 - `pnpm db:studio` - Open Prisma Studio

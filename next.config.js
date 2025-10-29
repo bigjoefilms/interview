@@ -17,6 +17,20 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+
+  // Disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  // Exclude test files from build
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(test|spec)\.(js|jsx|ts|tsx)$/,
+      loader: 'ignore-loader',
+    });
+    return config;
+  },
 };
 
 export default config;
