@@ -3,9 +3,6 @@
 A T3 Stack Address Book application with interactive filtering, sorting, and search capabilities.
 
 
-🚀 **Live Demo**: [https://interview-eight-rosy.vercel.app/](https://address-book-challenge-ten.vercel.app/)
-
-
 ## Overview
 
 Create an Address Book app that fetches user data from [dummyjson.com/users](https://dummyjson.com/users) with:
