@@ -30,8 +30,8 @@ export const todoRouter = createTRPCRouter({
 
       const newTodo = await ctx.db.todo.create({
         data: {
-          id: newId,
           todo: input.todo,
+          id: newId,
           userId: input.userId,
           completed: false,
         },
@@ -60,7 +60,6 @@ export const todoRouter = createTRPCRouter({
     }),
 
   deleteTodo: publicProcedure
-    .input(z.object({ id: z.number() }))
     .mutation(async ({ ctx, input }) => {
       await ctx.db.todo.delete({
         where: { id: input.id },
@@ -70,7 +69,6 @@ export const todoRouter = createTRPCRouter({
     }),
 
   toggleTodo: publicProcedure
-    .input(z.object({ id: z.number() }))
     .mutation(async ({ ctx, input }) => {
       // Get current todo
       const todo = await ctx.db.todo.findUnique({

@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./prisma/db.sqlite"
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
 }
 
 model User {
@@ -77,7 +77,6 @@ model User {
     // Indices for searching
     @@index([firstName])
     @@index([lastName])
-    @@index([email])
     @@index([phone])
     @@index([companyName])
 }
